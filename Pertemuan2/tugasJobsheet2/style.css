@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+.container-satu {
+    width: 1000px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+    border: 1px solid #e9e1d8;
+    border-radius: 10px;
+}
+
+.kolom-utama {
+    flex: 3;
+}
+
+.kolom-utama h2 {
+    font-size: 28px;
+    color: #7d5a3c;
+    margin-top: 0;
+    border-bottom: 2px solid #eef2f5;
+    padding-bottom: 10px;
+}
+
+.kolom-utama img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.kolom-utama p {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.sidebar-satu {
+    flex: 1;
+    background-color: #fdf8f2;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar-dua {
+    flex: 2;
+    background-color: #fdf8f2;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar-satu h3, .sidebar-dua h3 {
+    margin-top: 0;
+    color: #7d5a3c;
+    border-bottom: 2px solid #eef2f5;
+    padding-bottom: 8px;
+    font-size: 18px;
+}
