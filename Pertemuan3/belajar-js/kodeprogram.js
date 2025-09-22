@@ -1,0 +1,1 @@
+alert("Hello, ini adalah progran 35 eksternal!");
