@@ -12,6 +12,8 @@ perkenalan("Hamdana", "Hallo");
 echo "<hr>";
 
 $saya = "Bagus";
+$ucapanSalam = "Selamat pagi";
+
 //memanggil lagi tanpa mengisi parameter salam
 perkenalan($saya);
 ?>
