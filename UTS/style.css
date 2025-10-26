@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --bg-main: #fdfbf5;     
+  --bg-card: #ffffff;       
+  --text-primary: #212529;   
+  --text-secondary: #6c757d; 
+  --accent-blue: #006FDE;   
+  --accent-blue-dark: #005cba;
+  --error: #dc3545;         
+  --success: #198754;      
+  --border-color: #ced4da;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: slideDown 0.8s ease-out;
+}
+
+.header-content {
+  background-color: transparent;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+/* definisi animasi slideDown */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* style untuk pembungkus form */
+.form-section {
+  background-color: var(--bg-card);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+  animation: slideUp 0.8s ease-out;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+/* definisi animasi slideUp */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: flex;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.form-group input::placeholder {
+  color: var(--text-secondary);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(0, 111, 222, 0.2); 
+}
+
+.form-group input[readonly] {
+  background-color: var(--bg-main); 
+  cursor: not-allowed;
+}
+
+.quantity-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-btn {
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-main);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+.qty-btn:hover {
+  border-color: var(--accent-blue);
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.quantity-input input {
+  flex: 1;
+  text-align: center;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--accent-blue);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-submit:hover {
+  background-color: var(--accent-blue-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 111, 222, 0.25);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-submit:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 0.85rem;
+  display: none;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* style untuk Hasil AJAX 
+  kelas .hasil-container ini ada di dalam 'proses.php'
+*/
+.hasil-container {
+  text-align: center;
+}
+
+.hasil-container h2 {
+  color: var(--success);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hasil-container p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.detail-pesanan {
+  background-color: var(--bg-main);
+  border-left: 4px solid var(--success);
+  padding: 25px;
+  margin-top: 20px;
+  text-align: left;
+  border-radius: 12px;
+  /* line-height: 2;  */
+}
+
+.detail-pesanan strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.hasil-container h3 {
+  margin-top: 30px;
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.hasil-container ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.hasil-container li {
+  background-color: var(--bg-main);
+  padding: 18px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-blue);
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.hasil-container li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 111, 222, 0.15);
+  background-color: var(--bg-card);
+}
+
+.hasil-container li .price-text {
+  color: var(--accent-blue);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  .form-section {
+    padding: 30px 20px;
+  }
+  .container {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .header p {
+    font-size: 0.95rem;
+  }
+  .form-section {
+    padding: 20px 15px;
+  }
+}
